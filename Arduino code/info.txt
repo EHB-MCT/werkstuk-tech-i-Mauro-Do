@@ -1,1 +1,52 @@
-Zet hier de arduino code
+const int motorPin = 2;
+const int buttPin = 5;
+const int ledPin = 4;
+
+int val = 0; 
+
+void setup()
+{
+  pinMode(ledPin,OUTPUT);
+  
+  pinMode(buttPin, INPUT);
+  pinMode(motorPin, OUTPUT);
+
+  Serial.begin(9600);
+  
+  
+       digitalWrite(ledPin,LOW);
+
+     digitalWrite(motorPin, HIGH);
+    
+}
+void loop() {
+  if(digitalRead(buttPin) == HIGH ){
+  digitalWrite(4, HIGH); //LED connected to pin 13 comes ON
+  delay(150);                    //delay(Milliseconds), so '5000' is 5 seconds
+  digitalWrite(4, LOW);  //LED connected to pin 13 goes OFF
+  delay(70);  
+digitalWrite(4, HIGH); //LED connected to pin 13 comes ON
+  delay(75);                    //delay(Milliseconds), so '5000' is 5 seconds
+  digitalWrite(4, LOW);  //LED connected to pin 13 goes OFF
+  delay(100);       
+  digitalWrite(4, HIGH); //LED connected to pin 13 comes ON
+  delay(50);                    //delay(Milliseconds), so '5000' is 5 seconds
+  digitalWrite(4, LOW);  //LED connected to pin 13 goes OFF
+  delay(205);                    //delay(Milliseconds), so '5000' is 5 seconds
+digitalWrite(4, HIGH); //LED connected to pin 13 comes ON
+  delay(800);  //delay(Milliseconds), so '5000' is 5 seconds
+         digitalWrite(ledPin,LOW);
+
+  }
+
+}
+
+
+       
+     
+  
+  int Speed1 = 100;
+  
+  int Time2 = 3000;
+  
+  
